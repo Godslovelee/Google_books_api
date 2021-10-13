@@ -23,7 +23,48 @@ class _LoginPageState extends State<LoginPage> {
 
   FormInput _formInput = FormInput.login;
 
+  bool validateAndSave() {
+    final form = formKey.currentState;
+    if (form.validate()) {
+      form.save();
+      return true;
+    }
+    return false;
+  }
 
+  void validateAndSubmit() async {
+    if (validateAndSave()) {
+      try {
+        if (_formInput == FormInput.login) {
+          String userID = await widget.authFireBase
+              .signInWithEmailAndPassword(_email, _password);
+
+          print("sign-in + $userID");
+        } else {
+          String userID = await widget.authFireBase
+              .createUserWithEmailAndPassword(_email, _password);
+          print("create-new-user + $userID");
+        }
+        widget.onSignedIn();
+      } catch (e) {
+        print("Error + $e");
+      }
+    }
+  }
+
+  void navigateToRegister() {
+    formKey.currentState.reset();
+    setState(() {
+      _formInput = FormInput.register;
+    });
+  }
+
+  navigateToLogin() {
+    formKey.currentState.reset();
+    setState(() {
+      _formInput = FormInput.login;
+    });
+  }
 
 //Widget Tree
   @override
