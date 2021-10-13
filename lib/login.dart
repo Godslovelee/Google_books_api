@@ -1,2 +1,4 @@
 import 'package:flutter/material.dart';
-import 'pa'
+import 'package:flutter/cupertino.dart';
+
+enum FormInput { login, register }
