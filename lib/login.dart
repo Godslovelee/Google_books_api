@@ -9,7 +9,7 @@ class LoginPage extends StatefulWidget {
 
   LoginPage({this.authFireBase, this.onSignedIn});
   final BaseAuthFireBase authFireBase;
-  final VoidCallback onSignedIn;
+  final VoidCallback oSignedIn;
 
   @override
   _LoginPageState createState() => new _LoginPageState();
