@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
         onSaved: (data) => _password = data,
         validator: (data) => data.isEmpty ? "Password cant be empty" : null,
         decoration: InputDecoration(labelText: "password"),
-        obscureText: false,
+        obscureText: true,
       ),
       Padding(
         padding: EdgeInsets.all(15),
