@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 
 enum FormInput { login, register }
 
 class LoginPage extends StatefulWidget {
-
-
-  LoginPage({this.authFireBase, this.onSignedIn});
-  //final BaseAuthFireBase authFireBase;
-  final VoidCallback onSignedIn;
 
   @override
   _LoginPageState createState() => new _LoginPageState();
@@ -18,9 +15,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final formKey = GlobalKey<FormState>();
   String _email;
-
   String _password;
-
   FormInput _formInput = FormInput.login;
 
   bool validateAndSave() {
@@ -36,14 +31,11 @@ class _LoginPageState extends State<LoginPage> {
     if (validateAndSave()) {
       try {
         if (_formInput == FormInput.login) {
-          String userID = await widget.authFireBase
-              .signInWithEmailAndPassword(_email, _password);
+        FirebaseUser user = (await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password)).user;
 
-          print("sign-in + $userID");
+          print("sign-in + $user");
         } else {
-          String userID = await widget.authFireBase
-              .createUserWithEmailAndPassword(_email, _password);
-          print("create-new-user + $userID");
+
         }
         widget.onSignedIn();
       } catch (e) {
