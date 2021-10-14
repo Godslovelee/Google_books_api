@@ -54,9 +54,7 @@ class _LoginPageState extends State<LoginPage> {
 
   navigateToLogin() {
     formKey.currentState.reset();
-    setState(() {
-      _formInput = FormInput.login;
-    });
+
   }
 
 
