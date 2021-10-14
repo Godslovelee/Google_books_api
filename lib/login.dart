@@ -38,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
           FirebaseUser user = (await FirebaseAuth.instance.createUserWithEmailAndPassword(email: _email, password: _password)).user;
 
         }
-        widget.onSignedIn();
+
       } catch (e) {
         print("Error + $e");
       }
