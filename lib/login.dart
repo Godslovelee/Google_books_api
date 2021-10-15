@@ -126,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
         FlatButton(
             color: Colors.blueAccent,
             child: Text(
-              "Already have an Account? Login",
+              "lready have an Account? Login",
               style: TextStyle(fontSize: 20.0),
             ),
             onPressed: () => navigateToLogin())
