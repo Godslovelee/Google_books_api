@@ -109,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
         FlatButton(
             color: Colors.blueAccent,
             child: Text(
-              "Create an Accottunttt",
+              "Create an Accottunttt"tt,
               style: TextStyle(fontSize: 20.0),
             ),
             onPressed: () => navigateToRegister())
