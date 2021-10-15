@@ -119,7 +119,7 @@ class _LoginPageState extends State<LoginPage> {
         FlatButton(
             color: Colors.blueAccent,
             child: Text(
-              "Create an Accouneetfffffff",
+              "Create an Accouneetfffffffff",
               style: TextStyle(fontSize: 20.0),
             ),
             onPressed: () => validateAndSubmit()),
