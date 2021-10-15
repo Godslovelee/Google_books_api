@@ -106,10 +106,10 @@ class _LoginPageState extends State<LoginPage> {
               style: TextStyle(fontSize: 20.0),
             ),
             onPressed: () => validateAndSubmit()),
-        TextButton(
+        FlatButton(
             color: Colors.blueAccent,
             child: Text(
-              "Create an Account",
+              "Create an Accounttt",
               style: TextStyle(fontSize: 20.0),
             ),
             onPressed: () => navigateToRegister())
