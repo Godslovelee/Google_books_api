@@ -64,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Google Books"),
+          title: Text("Google Bookfffs"),
         ),
         body: Container(
             padding: EdgeInsets.all(16.0),
