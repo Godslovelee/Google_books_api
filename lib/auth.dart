@@ -15,3 +15,14 @@ class Auth implements BaseAuthFireBase{
     return user.uid;
 
   }
+
+  Future<String>createUserWithEmailAndPassword(email, password)async{
+    FirebaseUser user = (await FirebaseAuth.instance
+        .createUserWithEmailAndPassword(
+        email: email, password: password)).user;
+    return user.uid;
+  }
+
+
+
+}
