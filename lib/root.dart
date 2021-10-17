@@ -49,7 +49,7 @@ class _RootPageState  extends State<RootPage> {
           authFireBase: widget.auth,
           onSignedIn: _signed,);
       case Auth_Status.SignedIn:
-        return LoanScreen();
+        return Text("Hello");
     }
   }
 
