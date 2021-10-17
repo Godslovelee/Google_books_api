@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
+import 'auth.dart';
 
 
 enum FormInput { login, register }
 
 class LoginPage extends StatefulWidget {
+
+
+  LoginPage({this.authFireBase, this.onSignedIn});
+  final BaseAuthFireBase authFireBase;
+  final VoidCallback onSignedIn;
 
   @override
   _LoginPageState createState() => new _LoginPageState();
@@ -15,7 +19,9 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   final formKey = GlobalKey<FormState>();
   String _email;
+
   String _password;
+
   FormInput _formInput = FormInput.login;
 
   bool validateAndSave() {
@@ -31,14 +37,16 @@ class _LoginPageState extends State<LoginPage> {
     if (validateAndSave()) {
       try {
         if (_formInput == FormInput.login) {
-        FirebaseUser user = (await FirebaseAuth.instance.signInWithEmailAndPassword(email: _email, password: _password)).user;
+          String userID = await widget.authFireBase
+              .signInWithEmailAndPassword(_email, _password);
 
-          print("sign-in + $user");
+          print("sign-in + $userID");
         } else {
-          FirebaseUser user = (await FirebaseAuth.instance.createUserWithEmailAndPassword(email: _email, password: _password)).user;
-
+          String userID = await widget.authFireBase
+              .createUserWithEmailAndPassword(_email, _password);
+          print("create-new-user + $userID");
         }
-
+        widget.onSignedIn();
       } catch (e) {
         print("Error + $e");
       }
@@ -59,12 +67,12 @@ class _LoginPageState extends State<LoginPage> {
     });
   }
 
-
+//Widget Tree
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Google Book"),
+          title: Text("Loan Concept"),
         ),
         body: Container(
             padding: EdgeInsets.all(16.0),
@@ -119,7 +127,7 @@ class _LoginPageState extends State<LoginPage> {
         FlatButton(
             color: Colors.blueAccent,
             child: Text(
-              "Create an Accountfff",
+              "Create an Account",
               style: TextStyle(fontSize: 20.0),
             ),
             onPressed: () => validateAndSubmit()),
