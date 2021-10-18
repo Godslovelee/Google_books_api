@@ -1,3 +1,7 @@
+import 'dart:core';
+import 'dart:core';
+import 'dart:ffi';
+
 import 'package:flutter/cupertino.dart';
 
 class BookMain extends StatefulWidget {
@@ -8,6 +12,10 @@ class BookMain extends StatefulWidget {
 }
 
 class _BookMainState extends State<BookMain> {
+  BooksHelper helper;
+  List<dynamic> books = List<dynamic>();
+
+
   @override
   Widget build(BuildContext context) {
     return Container();
