@@ -15,6 +15,7 @@ class _BookMainState extends State<BookMain> {
   BooksHelper helper;
   List<dynamic> books = List<dynamic>();
   int booksCount;
+  TextEditingController txtSearchController;
 
 
   @override
