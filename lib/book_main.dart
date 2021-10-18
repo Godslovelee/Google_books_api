@@ -23,6 +23,7 @@ class _BookMainState extends State<BookMain> {
 
   @override
   Widget build(BuildContext context) {
-    bool
+    bool isSmall = false;
+
   }
 }
