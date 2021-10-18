@@ -24,6 +24,9 @@ class _BookMainState extends State<BookMain> {
   @override
   Widget build(BuildContext context) {
     bool isSmall = false;
+    if(MediaQuery.of(context).size.width <600){
+
+    }
 
   }
 }
