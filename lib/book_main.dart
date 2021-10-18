@@ -12,7 +12,7 @@ class BookMain extends StatefulWidget {
 }
 
 class _BookMainState extends State<BookMain> {
-  BooksHelper helpedr;
+  BooksHelper helper;
   List<dynamic> books = List<dynamic>();
 
 
