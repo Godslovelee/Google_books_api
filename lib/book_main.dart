@@ -16,10 +16,12 @@ class _BookMainState extends State<BookMain> {
   List<dynamic> books = List<dynamic>();
   int booksCount;
   TextEditingController txtSearchController;
-  initialize();
-  super.@override
+
+
   void initState() {
-    // TODO: implement initState
+    helper = BooksHelper();
+    txtSearchController = new TextEditingController();
+    initialize();
     super.initState();
   }
 
