@@ -52,6 +52,14 @@ class _BookMainState extends State<BookMain> {
           )
         ],
       ),
+      body: SingleChildScrollView(
+        child:Column(
+          children: [
+
+          ],
+
+        )
+      ),
 
     );
   }
