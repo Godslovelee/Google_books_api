@@ -18,7 +18,6 @@ class _BookMainState extends State<BookMain> {
   int booksCount;
   TextEditingController txtSearchController;
 
-
   void initState() {
     helper = BooksHelper();
     txtSearchController = new TextEditingController();
@@ -26,31 +25,32 @@ class _BookMainState extends State<BookMain> {
     super.initState();
   }
 
-
   @override
   Widget build(BuildContext context) {
     bool isSmall = false;
-    if(MediaQuery.of(context).size.width <600){
+    if (MediaQuery.of(context).size.width < 600) {
       isSmall = true;
-
     }
     return Scaffold(
       appBar: AppBar(
         title: Text(""),
         actions: [
           InkWell(
-            child: Padding(padding: EdgeInsets.all(20.0
-            ),
-              child: (isSmall)?Icon(Icons.home) : Text("Home")
-
-              
-            ),
+            child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: (isSmall) ? Icon(Icons.home) : Text("Home")),
           ),
+          InkWell(
+            child: Padding(
+              padding: EdgeInsets.all(20.0),
+              child: (isSmall) ? Icon(Icons.star) : Text('favourites'),
+            ),
+            onTap: ()=>{
 
+            },
+          )
         ],
       ),
-
     );
-
   }
 }
