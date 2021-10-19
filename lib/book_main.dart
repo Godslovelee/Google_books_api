@@ -46,6 +46,7 @@ class _BookMainState extends State<BookMain> {
               child: (isSmall) ? Icon(Icons.star) : Text('favourites'),
             ),
             onTap: ()=>{
+              Navigator.push(context, MaterialPageRoute(builder: (context)))
 
             },
           )
