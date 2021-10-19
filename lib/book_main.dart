@@ -35,6 +35,9 @@ class _BookMainState extends State<BookMain> {
 
     }
     return Scaffold(
+      appBar: AppBar(
+        title: Text(""),
+      ),
 
     );
 
