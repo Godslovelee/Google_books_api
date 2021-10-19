@@ -3,6 +3,7 @@ import 'dart:core';
 import 'dart:ffi';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class BookMain extends StatefulWidget {
   const BookMain({Key key}) : super(key: key);
@@ -30,8 +31,12 @@ class _BookMainState extends State<BookMain> {
   Widget build(BuildContext context) {
     bool isSmall = false;
     if(MediaQuery.of(context).size.width <600){
+      isSmall = true;
 
     }
+    return Scaffold(
+
+    );
 
   }
 }
