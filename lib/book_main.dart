@@ -39,7 +39,10 @@ class _BookMainState extends State<BookMain> {
         title: Text(""),
         actions: [
           InkWell(
-            child: Padding(padding: EdgeInsets.all(20.0),
+            child: Padding(padding: EdgeInsets.all(20.0
+            ),
+              child: (isSmall)?Icon(Icons.home) : Text("Home")
+
               
             ),
           )
