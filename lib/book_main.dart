@@ -55,6 +55,23 @@ class _BookMainState extends State<BookMain> {
       body: SingleChildScrollView(
         child:Column(
           children: [
+            Padding(
+
+              padding: EdgeInsets.all(20.0
+              ),
+              child: Row(children: [
+                Text('Search Book'),
+                Container(
+                  padding: EdgeInsets.all(20.0),
+                  width: 200,
+                  child: TextField(
+                    controller: txtSearchController,
+                  ),
+                )
+              ],),
+
+            ),
+
 
           ],
 
