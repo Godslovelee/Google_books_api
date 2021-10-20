@@ -58,7 +58,7 @@ class _BookMainState extends State<BookMain> {
             Padding(
 
               padding: EdgeInsets.all(20.0
-              ),w
+              ),
               child: Row(children: [
                 Text('Search Book'),
                 Container(
