@@ -68,7 +68,12 @@ class _BookMainState extends State<BookMain> {
                     controller: txtSearchController,
                     keyboardType: TextInputType.text,
                     onSubmitted: (text){
-                      helper.getBooks(text).then((value){}
+                      helper.getBooks(text).then((value){
+                       books = value;
+                       setState(() {
+                         books = books;
+                       });
+                      });
                     }
                     ,
 
