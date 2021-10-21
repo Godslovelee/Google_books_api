@@ -67,6 +67,10 @@ class _BookMainState extends State<BookMain> {
                   child: TextField(
                     controller: txtSearchController,
                     keyboardType: TextInputType.text,
+                    onSubmitted: (text){
+                      helper.getBooks(text).then((value){}
+                    }
+                    ,
 
                   ),
                 )
