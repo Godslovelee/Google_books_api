@@ -75,10 +75,21 @@ class _BookMainState extends State<BookMain> {
                       });
                     },
                   ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(20.0),
+                  child:  IconButton(
+                    icon: Icon(Icons.search),
+                     onPressed: () => helper.getBooks(txtSearchController.text)
+                  ),
                 )
               ],
             ),
           ),
+          Padding(padding: EdgeInsets.all(20.0),
+            chil
+            
+          )
         ],
       )),
     );
