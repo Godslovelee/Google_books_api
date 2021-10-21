@@ -66,7 +66,8 @@ class _BookMainState extends State<BookMain> {
                   width: 200,
                   child: TextField(
                     controller: txtSearchController,
-                    keyboardType: TextInputType.text
+                    keyboardType: TextInputType.text,
+
                   ),
                 )
               ],),
