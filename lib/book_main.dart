@@ -45,21 +45,20 @@ class _BookMainState extends State<BookMain> {
               padding: EdgeInsets.all(20.0),
               child: (isSmall) ? Icon(Icons.star) : Text('favourites'),
             ),
-            onTap: ()=>{
-              Navigator.push(context, MaterialPageRoute(builder: (context)=>FavouritesScreen()))
-
+            onTap: () => {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => FavouritesScreen()))
             },
           )
         ],
       ),
       body: SingleChildScrollView(
-        child:Column(
-          children: [
-            Padding(
-
-              padding: EdgeInsets.all(20.0
-              ),
-              child: Row(children: [
+          child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Row(
+              children: [
                 Text('Search Book'),
                 Container(
                   padding: EdgeInsets.all(20.0),
@@ -67,28 +66,21 @@ class _BookMainState extends State<BookMain> {
                   child: TextField(
                     controller: txtSearchController,
                     keyboardType: TextInputType.text,
-                    onSubmitted: (text){
-                      helper.getBooks(text).then((value){
-                       books = value;
-                       setState(() {
-                         books = books;
-                       });
+                    onSubmitted: (text) {
+                      helper.getBooks(text).then((value) {
+                        books = value;
+                        setState(() {
+                          books = books;
+                        });
                       });
-                    }
-                    ,
-
+                    },
                   ),
                 )
-              ],),
-
+              ],
             ),
-
-
-          ],
-
-        )
-      ),
-
+          ),
+        ],
+      )),
     );
   }
 }
