@@ -22,7 +22,10 @@ class BooksHelper{
       final jsonResponse = json.decode(result.body);
       final  booksMap = jsonResponse["items"];
       List<dynamic> books = booksMap.map((i) => Book.fromJson(i)).toList();
-      return
+      return books;
+    }
+    else{
+      return null;
     }
   }
 
