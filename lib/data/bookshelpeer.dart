@@ -18,6 +18,7 @@ class BooksHelper{
     Response result = await http.get(url);
     if(result.statusCode == 200){
       final jsonResponse = json.decode(result.body);
+      final booksMap = jsonResponse["items"];
     }
   }
 
