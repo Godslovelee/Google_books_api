@@ -17,7 +17,7 @@ class BooksHelper{
     final String url = urlBase + urlQuery + query;
     Response result = await http.get(url);
     if(result.statusCode == 200){
-      final jsonResponse = json.decoder
+      final jsonResponse = json.decode(result.body);
     }
   }
 
