@@ -94,4 +94,15 @@ class _BookMainState extends State<BookMain> {
       )),
     );
   }
+
+  Future initialize() async{
+    books = await helper.getBooks(
+      'books'
+    );
+    setState(() {
+      booksCount = books.length;
+      books = books;
+    });
+  }
 }
+
