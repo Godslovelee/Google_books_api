@@ -29,6 +29,9 @@ class BooksHelper{
     }
   }
 
-  Future<List<dynamic>> getFavorites(String query) async{}
+  Future<List<dynamic>> getFavorites(String query) async{
+
+
+  }
 
 }
