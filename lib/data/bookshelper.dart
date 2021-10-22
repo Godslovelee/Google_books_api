@@ -19,6 +19,8 @@ class BooksHelper{
     if(result.statusCode == 200){
       final jsonResponse = json.decode(result.body);
       final booksMap = jsonResponse["items"];
+      List<dynamic> books = booksMap.map((i) => Book.fromJson(i)).toList();
+      retur
     }
   }
 
