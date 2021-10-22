@@ -14,7 +14,11 @@ class BooksHelper{
   final String urlBase = "https://www.googleapis.com/books/v1";
 
   Future<List<dynamic>> getBooks(String query) async{
-    final String url
+    final String url = urlBase + urlQuery + query;
+    Response result = await http.get(url);
+    if(result.statusCode == 200){
+      final jsonResponse = json.decoder
+    }
   }
 
 }
