@@ -38,6 +38,8 @@ class BooksHelper{
 
       for(int i = 0; i <allKeys.length; i++){
         String key = (allKeys.elementAt(i).toString());
+        String value  = shared_preferences.get(key);
+        dynamic json
       }
     }
   }
