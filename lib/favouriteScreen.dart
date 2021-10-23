@@ -34,8 +34,18 @@ void initState(){
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text('Favorite Books'),),
-    )
+      appBar: AppBar(title: Text('Favorite Books'),
+      actions: [
+        InkWell(
+          child: Padding(
+            padding: EdgeInsets.all(20.0),
+          ),
+          child:(isSmall) ?  Icon(Icons.home)
+        )
+      ],
+      ),
+
+    );
   }
 
   Future initialize()async {
