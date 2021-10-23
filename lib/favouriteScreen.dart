@@ -39,7 +39,9 @@ void initState(){
         InkWell(
           child: Padding(
             padding: EdgeInsets.all(20.0),  child:(isSmall) ?  Icon(Icons.home) : Text("Home"),),
-    onTap: ,
+    onTap: (){
+
+    },
 
           ),
 
