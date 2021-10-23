@@ -38,9 +38,9 @@ void initState(){
       actions: [
         InkWell(
           child: Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: EdgeInsets.all(20.0),  child:(isSmall) ?  Icon(Icons.home) : Text("Home"),
           ),
-          child:(isSmall) ?  Icon(Icons.home)
+
         )
       ],
       ),
