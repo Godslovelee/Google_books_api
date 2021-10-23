@@ -46,7 +46,9 @@ class BooksHelper{
       return favBooks;
     }
 
-    Fut
+    Future addToFavourites(Book book)async{
+
+    }
   }
 
 }
