@@ -34,7 +34,7 @@ class BooksHelper{
     List<dynamic> favBooks = List<dynamic>();
     Set allKeys = shared_preferences.getKeys();
 
-    if(allKeys.isNotEmpty()){
+    if(allKeys.isNotEmpty){
 
       for()
     }
