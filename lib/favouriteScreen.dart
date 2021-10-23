@@ -44,6 +44,13 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
               );
             },
           ),
+          InkWell(
+            child: Padding(
+              padding: EdgeInsets.all(20.0),
+              child: (isSmall) ? Icon(Icons.star) : Text("Favorites"),
+
+            )
+          )
         ],
       ),
     );
