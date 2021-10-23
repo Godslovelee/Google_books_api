@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import './data/bookshelper.dart';
+import 'dart:core';
+import 'package:flutter/cupertino.dart';
+import 'book_main.dart';
 
 class FavouritesScreen extends StatefulWidget {
   const FavouritesScreen({Key key}) : super(key: key);
@@ -10,12 +13,32 @@ class FavouritesScreen extends StatefulWidget {
 
 class _FavouritesScreenState extends State<FavouritesScreen> {
  BooksHelper helper;
-List<dynamic> books = List<dynamic>();
-int boo
+ List<dynamic> books = List<dynamic>();
+ int booksCount ;
+
+
+void initState(){
+  helper = BooksHelper();
+  initialize();
+  super.initState();
+}
+
+
 
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    bool isSmall = false;
+    if(MediaQuery.of(context).size.width < 700){
+      isSmall = true;
+    }
+
+    return Scaffold(
+      appBar: AppBar(title: Text('Favorite Books'),),
+    )
+  }
+
+  Future initialize()async {
+
   }
 }
