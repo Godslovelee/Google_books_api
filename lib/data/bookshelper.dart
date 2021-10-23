@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'dart:async';
 import '../book_main.dart';
-dynamicimport 'books.dart';
+import 'book.dart';
 import 'package:http/http.dart' ;
 import 'package:shared_preferences/shared_preferences.dart';
 import '../favouriteScreen.dart';
@@ -61,6 +61,12 @@ class BooksHelper{
 
   Future removeFromFavourites(Book book, BuildContext context)async{
     SharedPreferences preferences = await SharedPreferences.getInstance();
+    String id = preferences.getString(book.id);
+    if (id != ''){
+      await preferences.remove(book.id);
+      books.remove(book);
+      Navigator.push(context, MaterialPageRoute(builder: (context)=> favouriteScreen));
+    }
 
   }
 
