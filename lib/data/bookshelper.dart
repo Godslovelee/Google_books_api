@@ -59,6 +59,11 @@ class BooksHelper{
     }
   }
 
+  Future removeFromFavourites(Book book, BuildContext context)async{
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+
+  }
+
 
 
 }
