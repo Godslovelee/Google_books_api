@@ -20,6 +20,8 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+
+  shared_preferences:
   flutter:
     sdk: flutter
   firebase_auth: ^0.15.2
