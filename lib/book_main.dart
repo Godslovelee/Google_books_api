@@ -2,7 +2,7 @@ import 'dart:core';
 import 'dart:core';
 import 'dart:ffi';
 import './data/bookshelper.dart';
-import 'favouritesScreen.dart';
+dynamicimport 'favouriteScreen.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
