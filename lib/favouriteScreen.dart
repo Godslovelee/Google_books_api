@@ -12,47 +12,42 @@ class FavouritesScreen extends StatefulWidget {
 }
 
 class _FavouritesScreenState extends State<FavouritesScreen> {
- BooksHelper helper;
- List<dynamic> books = List<dynamic>();
- int booksCount ;
+  BooksHelper helper;
+  List<dynamic> books = List<dynamic>();
+  int booksCount;
 
-
-void initState(){
-  helper = BooksHelper();
-  initialize();
-  super.initState();
-}
-
-
-
+  void initState() {
+    helper = BooksHelper();
+    initialize();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     bool isSmall = false;
-    if(MediaQuery.of(context).size.width < 700){
+    if (MediaQuery.of(context).size.width < 700) {
       isSmall = true;
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text('Favorite Books'),
-      actions: [
-        InkWell(
-          child: Padding(
-            padding: EdgeInsets.all(20.0),  child:(isSmall) ?  Icon(Icons.home) : Text("Home"),),
-    onTap: (){
-
-    },
-
+      appBar: AppBar(
+        title: Text('Favorite Books'),
+        actions: [
+          InkWell(
+            child: Padding(
+              padding: EdgeInsets.all(20.0),
+              child: (isSmall) ? Icon(Icons.home) : Text("Home"),
+            ),
+            onTap: () {
+              Navigator.push(context,
+              MaterialPageRoute(builder: (context)=>BookMain())
+              );
+            },
           ),
-
-
-      ],
+        ],
       ),
-
     );
   }
 
-  Future initialize()async {
-
-  }
+  Future initialize() async {}
 }
