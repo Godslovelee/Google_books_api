@@ -47,6 +47,14 @@ class BooksHelper{
     }
 
     Future addToFavourites(Book book)async{
+      SharedPreferences preferences = await SharedPreferences.getInstance();
+      String id = preferences.getString(book.id);
+
+      if (id != ''){
+        await preferences.setString(book.id, json.encode(book.toJson()));
+      }
+
+
 
     }
   }
