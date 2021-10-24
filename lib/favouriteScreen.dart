@@ -53,6 +53,18 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
           )
         ],
       ),
+      body: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(20.0),
+            child: Text('My favourite'),
+          ),
+          Padding(
+            padding: EdgeInsets.all(20.0),
+            child:(isSmall) ? BooksList(books,true) : BooksTable(books,true)
+          )
+        ],
+      ),
     );
   }
 
