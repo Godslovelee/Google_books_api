@@ -68,5 +68,12 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
     );
   }
 
-  Future initialize() async {}
+  Future initialize() async {
+    books = await helper.getFavorites();
+    setState(() {
+      booksCount = books.length;
+      books = books;
+
+    });
+  }
 }
