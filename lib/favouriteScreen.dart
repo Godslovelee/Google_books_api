@@ -64,7 +64,7 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
             child:(isSmall) ? BooksList(books,true) : BooksTable(books,true)
           )
         ],
-      ),
+      ),d
     );
   }
 
