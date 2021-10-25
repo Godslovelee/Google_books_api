@@ -27,7 +27,7 @@ class BooksHelper{
     }
   }
 
-  Future<List<dynamic>> getFavorites(String query) async{
+  Future<List<dynamic>> getFavorites() async{
     final SharedPreferences shared_preferences = await SharedPreferences.getInstance();
     List<dynamic> favBooks = List<dynamic>();
     Set allKeys = shared_preferences.getKeys();
