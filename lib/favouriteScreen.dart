@@ -65,7 +65,7 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
           )
         ],
       ),
-    );ddf
+    );
   }
 
   Future initialize() async {
