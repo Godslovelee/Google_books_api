@@ -75,5 +75,4 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
       books = books;
 
     });
-  }kkkk
 }
