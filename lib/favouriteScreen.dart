@@ -3,6 +3,8 @@ import './data/bookshelper.dart';
 import 'dart:core';
 import 'package:flutter/cupertino.dart';
 import 'book_main.dart';
+import 'package:google_books_api/book.dart';
+import 'dart:ui';
 
 class FavouritesScreen extends StatefulWidget {
   const FavouritesScreen({Key key}) : super(key: key);
