@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'book_main.dart';
 import 'package:google_books_api/book.dart';
 import 'dart:ui';
+import 'ui.dart';
 
 class FavouritesScreen extends StatefulWidget {
   const FavouritesScreen({Key key}) : super(key: key);
@@ -27,7 +28,10 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
   @override
   Widget build(BuildContext context) {
     bool isSmall = false;
-    if (MediaQuery.of(context).size.width < 700) {
+    if (MediaQuery
+        .of(context)
+        .size
+        .width < 700) {
       isSmall = true;
     }
 
@@ -42,16 +46,16 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
             ),
             onTap: () {
               Navigator.push(context,
-              MaterialPageRoute(builder: (context)=>BookMain())
+                  MaterialPageRoute(builder: (context) => BookMain())
               );
             },
           ),
           InkWell(
-            child: Padding(
-              padding: EdgeInsets.all(20.0),
-              child: (isSmall) ? Icon(Icons.star) : Text("Favorites"),
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: (isSmall) ? Icon(Icons.star) : Text("Favorites"),
 
-            )
+              )
           )
         ],
       ),
@@ -62,8 +66,9 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
             child: Text('My favourite'),
           ),
           Padding(
-            padding: EdgeInsets.all(20.0),
-            child:(isSmall) ? BooksList(books,true) : BooksTable(books,true)
+              padding: EdgeInsets.all(20.0),
+              child: (isSmall) ? BooksList(books, true) : BooksTable(
+                  books, true)
           )
         ],
       ),
@@ -75,6 +80,6 @@ class _FavouritesScreenState extends State<FavouritesScreen> {
     setState(() {
       booksCount = books.length;
       books = books;
-
     });
+  }
 }
