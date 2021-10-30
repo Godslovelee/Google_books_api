@@ -38,7 +38,7 @@ class _BookMainState extends State<BookMain> {
     }
     return Scaffold(
       appBar: AppBar(
-        title: Text(""),
+        title: Text("d"),
         actions: [
           InkWell(
             child: Padding(
