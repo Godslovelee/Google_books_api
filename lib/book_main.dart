@@ -2,6 +2,7 @@ import 'dart:core';
 
 import './data/bookshelper.dart';
 import 'favouriteScreen.dart';
+import 'ui.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class BookMain extends StatefulWidget {
 
 class _BookMainState extends State<BookMain> {
   BooksHelper helper;
-  List<dynamic> books = List<dynamic>();
+  List<dynamic> books = [];
   int booksCount;
   TextEditingController txtSearchController;
 
@@ -29,7 +30,10 @@ class _BookMainState extends State<BookMain> {
   @override
   Widget build(BuildContext context) {
     bool isSmall = false;
-    if (MediaQuery.of(context).size.width < 600) {
+    if (MediaQuery
+        .of(context)
+        .size
+        .width < 600) {
       isSmall = true;
     }
     return Scaffold(
@@ -46,7 +50,8 @@ class _BookMainState extends State<BookMain> {
               padding: EdgeInsets.all(20.0),
               child: (isSmall) ? Icon(Icons.star) : Text('favourites'),
             ),
-            onTap: () => {
+            onTap: () =>
+            {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => FavouritesScreen()))
             },
@@ -55,50 +60,52 @@ class _BookMainState extends State<BookMain> {
       ),
       body: SingleChildScrollView(
           child: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.all(20.0),
-            child: Row(
-              children: [
-                Text('Search Book'),
-                Container(
-                  padding: EdgeInsets.all(20.0),
-                  width: 200,
-                  child: TextField(
-                    controller: txtSearchController,
-                    keyboardType: TextInputType.text,
-                    onSubmitted: (text) {
-                      helper.getBooks(text).then((value) {
-                        books = value;
-                        setState(() {
-                          books = books;
-                        });
-                      });
-                    },
-                  ),
+            children: [
+              Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Row(
+                  children: [
+                    Text('Search Book'),
+                    Container(
+                      padding: EdgeInsets.all(20.0),
+                      width: 200,
+                      child: TextField(
+                        controller: txtSearchController,
+                        keyboardType: TextInputType.text,
+                        onSubmitted: (text) {
+                          helper.getBooks(text).then((value) {
+                            books = value;
+                            setState(() {
+                              books = books;
+                            });
+                          });
+                        },
+                      ),
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(20.0),
+                      child: IconButton(
+                          icon: Icon(Icons.search),
+                          onPressed: () =>
+                              helper.getBooks(txtSearchController.text)
+                      ),
+                    )
+                  ],
                 ),
-                Container(
-                  padding: EdgeInsets.all(20.0),
-                  child:  IconButton(
-                    icon: Icon(Icons.search),
-                     onPressed: () => helper.getBooks(txtSearchController.text)
-                  ),
-                )
-              ],
-            ),
-          ),
-          Padding(padding: EdgeInsets.all(20.0),
-            child:(isSmall) ? BooksList(books, false) : BooksTable(books, false),
-            
-          )
-        ],
-      )),
+              ),
+              Padding(padding: EdgeInsets.all(20.0),
+                child: (isSmall) ? BooksList(books, false) : BooksTable(
+                    books, false),
+
+              )
+            ],
+          )),
     );
   }
 
-  Future initialize() async{
+  Future initialize() async {
     books = await helper.getBooks(
-      'books'
+        'books'
     );
     setState(() {
       booksCount = books.length;
