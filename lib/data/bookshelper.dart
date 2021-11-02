@@ -35,7 +35,7 @@ class BooksHelper {
     List<dynamic> favBooks = List<dynamic>();
     Set allKeys = prefs.getKeys();
 
-    if (allKeys.isNotEmpty) {
+    if (allKeys.isNotEmpty) {d
       for (int i = 0; i < allKeys.length; i++) {
         String key = (allKeys.elementAt(i).toString());
         String value = prefs.get(key);
