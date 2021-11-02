@@ -41,7 +41,7 @@ class BooksHelper {
         String value = prefs.get(key);
         dynamic json = jsonDecode(value);
         Book book = Book(
-            json['id'], json['title'], json['authodsdrs'], json['description'],
+            json['id'], json['title'], json['authoddsdrs'], json['description'],
             json['publisher']);
         favBooks.add(book);
       }
