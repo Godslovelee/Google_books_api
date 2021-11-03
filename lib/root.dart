@@ -1,4 +1,4 @@
-
+import 'SimpleHome.dart';
 import 'package:flutter/material.dart';
 import 'auth.dart';
 import 'login.dart';
@@ -49,7 +49,7 @@ class _RootPageState  extends State<RootPage> {
           authFireBase: widget.auth,
           onSignedIn: _signed,);
       case Auth_Status.SignedIn:
-        return Text("Hello");
+        return SimpleHome();
     }
   }
 
