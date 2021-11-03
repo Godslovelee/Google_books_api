@@ -71,7 +71,7 @@ class BooksList extends StatelessWidget {
               print( "$isFavorite<---value" );
               return ListTile(
                 title: Text(books[position].title),
-                subtitle: Text(books[position].authors),
+                //subtitle: Text(books[position].authors),
                 trailing: IconButton(
                     color: (isFavorite ) ? Colors.red : Colors.amber,
                     tooltip: (isFavorite)
