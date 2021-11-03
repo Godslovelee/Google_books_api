@@ -2,12 +2,12 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'dart:async';
-import '../book_main.dart';
-import '../book.dart';
+import 'book_main.dart';
+import 'book.dart';
 
 import 'package:http/http.dart' ;
 import 'package:shared_preferences/shared_preferences.dart';
-import '../favouriteScreen.dart';
+import 'favouriteScreen.dart';
 
 class BooksHelper {
   final String urlKey = '&key=[ADD YOUR KEY HERE]';

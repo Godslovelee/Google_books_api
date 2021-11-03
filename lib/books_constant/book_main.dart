@@ -1,6 +1,6 @@
 import 'dart:core';
 
-import './data/bookshelper.dart';
+import 'bookshelper.dart';
 import 'favouriteScreen.dart';
 import 'ui.dart';
 

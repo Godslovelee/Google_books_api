@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import './data/bookshelper.dart';
+import 'bookshelper.dart';
 import 'dart:core';
 import 'package:flutter/cupertino.dart';
 import 'book_main.dart';
-import 'package:google_books_api/book.dart';
+import 'package:google_books_api/books_constant/book.dart';
 import 'dart:ui';
 import 'ui.dart';
 
