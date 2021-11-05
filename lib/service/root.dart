@@ -1,8 +1,8 @@
-import 'SimpleHome.dart';
+import '../SimpleHome.dart';
 import 'package:flutter/material.dart';
 import 'auth.dart';
-import 'books_constant/book_main.dart';
-import 'login.dart';
+import '../books_constant/book_main.dart';
+import '../screens/login.dart';
 
 
 class RootPage extends StatefulWidget{
