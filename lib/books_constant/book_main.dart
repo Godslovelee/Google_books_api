@@ -1,7 +1,7 @@
 import 'dart:core';
 
 import 'bookshelper.dart';
-import 'favouriteScreen.dart';
+import '../screens/favouriteScreen.dart';
 import 'ui.dart';
 
 import 'package:flutter/cupertino.dart';
