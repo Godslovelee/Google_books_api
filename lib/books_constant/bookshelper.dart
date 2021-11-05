@@ -7,7 +7,7 @@ import 'book.dart';
 
 import 'package:http/http.dart' ;
 import 'package:shared_preferences/shared_preferences.dart';
-import 'favouriteScreen.dart';
+import '../screens/favouriteScreen.dart';
 
 class BooksHelper {
   final String urlKey = '&key=[ADD YOUR KEY HERE]';
