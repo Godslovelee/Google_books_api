@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'auth.dart';
+import '../service/auth.dart';
 
 
 enum FormInput { login, register }
