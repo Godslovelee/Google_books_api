@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
         } else {
           String userID = await widget.authFireBase
               .createUserWithEmailAndPassword(_email, _password);
-          print("crefate-new-user + $userID");
+          print("crefate-new-ffuser + $userID");
         }
         widget.onSignedIn();
       } catch (e) {
