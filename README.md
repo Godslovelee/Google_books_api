@@ -3,8 +3,11 @@
 A new Flutter application.
 
 ## Getting Started
-
-This project is a starting point for a Flutter application.
+An Easy to use portable Google books reader,
+Allow authenication flow of users across the application cycle,
+Save Favourite books,
+Read Popular books,
+Search Favourite books
 
 A few resources to get you started if this is your first Flutter project:
 
